@@ -1,0 +1,198 @@
+/* Saimegül Yıldız — 2416501040 */
+
+:root {
+  --no: 2416501040;
+  --ton: 200;
+  --renk-ana: hsl(var(--ton) 65% 38%);
+  --renk-zemin: hsl(var(--ton) 30% 97%);
+  --font: Arial, sans-serif;
+  --bosluk-m: 1rem;
+  --kose: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font);
+  line-height: 1.6;
+  background-color: var(--renk-zemin);
+  color: #333;
+  padding: var(--bosluk-m);
+}
+
+header {
+  text-align: center;
+  margin-bottom: var(--bosluk-m);
+}
+
+header h1 {
+  font-size: 1.6rem;
+  margin-bottom: calc(var(--bosluk-m) / 2);
+  color: var(--renk-ana);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 12px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--renk-ana);
+  font-weight: bold;
+}
+
+nav a.active {
+  text-decoration: underline;
+  color: var(--renk-ana);
+}
+
+.card,
+article {
+  background: #fff;
+  padding: var(--bosluk-m);
+  border-radius: var(--kose);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: var(--bosluk-m);
+}
+
+section.etkinlikler,
+.etkinlikler {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--bosluk-m);
+}
+
+.kategori-tarih {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--bosluk-m);
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: calc(var(--kose) / 2);
+  width: 100%;
+}
+
+/* HATALI ALANLAR */
+input.is-invalid,
+select.is-invalid,
+textarea.is-invalid {
+  border: 2px solid #dc3545;
+  background-color: #fff8f8;
+}
+
+/* aria-invalid kullanan alanlar da kırmızı olsun */
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border: 2px solid #dc3545;
+  background-color: #fff8f8;
+}
+
+.error-text {
+  color: #dc3545;
+  font-size: 0.85rem;
+  margin-top: 3px;
+}
+
+button {
+  background: var(--renk-ana);
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: calc(var(--kose) / 2);
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.detay-icerik {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bosluk-m);
+}
+
+.afis-alani img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--kose);
+}
+
+dl {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+dt {
+  font-weight: bold;
+}
+
+/* SPRINT 3 - Filtre Alanı */
+.filtre {
+  display: grid;
+  gap: var(--bosluk-m);
+  margin-bottom: var(--bosluk-m);
+}
+
+#sonuc {
+  margin-bottom: var(--bosluk-m);
+  color: #666;
+}
+
+footer {
+  text-align: center;
+  margin-top: calc(var(--bosluk-m) * 2);
+  padding: 10px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Masaüstü Ekran Düzenlemeleri */
+@media (min-width: 768px) {
+  section.etkinlikler,
+  .etkinlikler {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .detay-icerik {
+    flex-direction: row;
+  }
+
+  .afis-alani {
+    flex: 1;
+  }
+
+  .kunye-alani {
+    flex: 2;
+  }
+
+  .filtre {
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+  }
+}

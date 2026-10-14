@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etkinlik Güncelle - Kampüs Etkinlikleri</title>
+    <link rel="stylesheet" href="css/2416501040.css">
+</head>
+<body>
+
+    <header>
+        <h1>Kampüs Etkinlikleri</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="etkinlikler.html">Etkinlikler</a></li>
+                <li><a href="etkinlik-ekle.html">Ekle</a></li>
+                <li><a href="etkinlik-guncelle.html" class="active">Güncelle</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Etkinlik Güncelle</h2>
+
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="etkinlik-adi">Etkinlik adı</label>
+                    <input type="text" id="etkinlik-adi" name="etkinlik_adi" value="Kariyer Günleri" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="kategori">Kategori</label>
+                    <select id="kategori" name="kategori" required>
+                        <option value="seminer" selected>Seminer ▾</option>
+                        <option value="atolye">Atölye</option>
+                        <option value="soylesi">Söyleşi</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="tarih">Tarih</label>
+                    <input type="date" id="tarih" name="tarih" value="2026-10-12" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="aciklama">Açıklama</label>
+                    <textarea id="aciklama" name="aciklama" rows="3" required>Mezun söyleşisi</textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Güncelle</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Saimegül Yıldız · 2416501040 · 2026</p>
+    </footer>
+
+</body>
+</html>
